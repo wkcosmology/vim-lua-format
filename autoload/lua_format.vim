@@ -40,7 +40,7 @@ function lua_format#format()
   let flags = " -i "
 
   " we can use config file for formatting which we have to set manually
-  let config_file = findfile(".lua-format", ".;")
+  let config_file = g:lua_format_config
   if empty(config_file) == 0 " append config_file to flags
     let flags = flags . " -c " . config_file
   end
